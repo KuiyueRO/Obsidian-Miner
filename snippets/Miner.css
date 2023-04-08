@@ -1,0 +1,185 @@
+/*滚轮不占宽度*/
+.markdown-preview-view {
+    font-size: var(--font-text-size);
+    font-family: var(--font-text);
+    line-height: var(--line-height-normal);
+    width: 100%;
+    height: 100%;
+    padding: var(--file-margins);
+    position: relative;
+    overflow: overlay;
+    overflow-y: 0;
+    overflow-wrap: break-word;
+    color: var(--text-normal);
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+div.modal-container.mod-dim>.modal.mod-settings.mod-sidebar-layout>.modal-content.vertical-tabs-container>.vertical-tab-header {
+    overflow: auto;
+    border-right: 1px solid var(--divider-color);
+    overflow: overlay;
+    overflow-y: 0;
+    overflow-wrap: break-word;
+}
+
+/*顶栏移动到下方*/
+/*左侧顶栏*/
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-left {
+    right: 0;
+    padding-left: var(--safe-area-inset-right);
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-left>.workspace-drawer-inner {
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--background-primary);
+    position: relative;
+    transition: width ease-out 150ms;
+    
+}
+
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-left>.workspace-drawer-inner>.workspace-drawer-tab-container>.workspace-drawer-tab-options {
+    overflow: hidden;
+    position: relative;
+    flex: 1 0 0;
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-left>.workspace-drawer-inner>.workspace-drawer-tab-container>.workspace-drawer-active-tab-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+/*手机平板右侧顶栏*/
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-right {
+    right: 0;
+    padding-right: var(--safe-area-inset-right);
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-right>.workspace-drawer-inner {
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--background-primary);
+    position: relative;
+    transition: width ease-out 150ms;
+}
+
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-right>.workspace-drawer-inner>.workspace-drawer-tab-container>.workspace-drawer-tab-options {
+    overflow: hidden;
+    position: relative;
+    flex: 1 0 0;
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+body.is-mobile>.app-container>.horizontal-main-container>.workspace>.workspace-drawer.mod-right>.workspace-drawer-inner>.workspace-drawer-tab-container>.workspace-drawer-active-tab-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*中间顶栏*/
+/*bug
+body.is-phone>.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root.mod-visible>.workspace-tabs.mod-active.mod-visible.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content[data-mode ^= 'preview'] {
+    width: 100%;
+    height: calc(100% - 48px);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+body.is-phone>.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root.mod-visible>.workspace-tabs.mod-active.mod-visible.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content[data-mode ^= 'source'] {
+    width: 100%;
+    height: calc(100% - 48px);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+*/
+
+
+
+/*手机双列菜单*/
+body.is-phone>.menu{
+    background-color: var(--background-secondary);
+    max-height: 60vh;
+    width: calc(100% - var(--safe-area-inset-left) - var(--safe-area-inset-right));
+    min-width: unset;
+    position: absolute;
+    padding-bottom: var(--safe-area-inset-bottom);
+    margin-left: var(--safe-area-inset-left);
+    margin-right: var(--safe-area-inset-right);
+    border-radius: var(--radius-l) var(--radius-l) 0 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: unset !important;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body.is-phone>.menu>.menu-item {
+  padding: var(--size-4-3) var(--size-4-3);
+  height: unset;
+  line-height: unset;
+  width: 50%;
+}
+
+body.is-phone>.menu>.menu-separator {
+    height: 0;
+    margin: var(--size-2-3) calc(var(--size-2-3) * -1);
+    border-bottom: 1px solid var(--background-modifier-border);
+    display: flex;
+    width: 100%;
+}
+
+/*设置面板分列*/
+div.modal-container.mod-dim>.modal.mod-settings.mod-sidebar-layout>.modal-content.vertical-tabs-container>.vertical-tab-header>.vertical-tab-header-group>.vertical-tab-header-group-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--background-primary);
+}
+
+div.modal-container.mod-dim>.modal.mod-settings.mod-sidebar-layout>.modal-content.vertical-tabs-container>.vertical-tab-header>.vertical-tab-header-group>.vertical-tab-header-group-items>.vertical-tab-nav-item {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    background-color: var(--background-primary);
+    padding: 0 var(--size-4-2) 0 var(--size-4-3);
+    margin: 0;
+    border-radius: 7px;
+    border-bottom: unset;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    min-width: 50%;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+div.modal-container.mod-dim>.modal.mod-settings.mod-sidebar-layout>.modal-content.vertical-tabs-container>.vertical-tab-header>.vertical-tab-header-group>.vertical-tab-header-group-items>.vertical-tab-nav-item.is-active {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    background-color: var(--interactive-accent);
+    padding: 0 var(--size-4-2) 0 var(--size-4-3);
+    margin: 0;
+    border-radius: 7px;
+    border-bottom: unset;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    min-width: 50%;
+    max-width: 100%;
+    flex-grow: 1;
+}
