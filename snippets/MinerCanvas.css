@@ -1,0 +1,167 @@
+/* sticky001 */
+
+.canvas-node:has(.sticky001) {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 458px;
+    height: 331px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+.canvas-node-container:has(.sticky001) {
+    border: none;
+    border-radius: 0;
+    background: #FFC1C1;
+}
+.canvas-wrapper:has(.sticky001) {
+  --shadow-stationary: none;
+}
+
+/* sticky002 */
+
+.canvas-node:has(.sticky002) {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 458px;
+    height: 331px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+.canvas-node-container:has(.sticky002) {
+    border: none;
+    border-radius: 0;
+    background: #fffac1;
+}
+.canvas-wrapper:has(.sticky002) {
+  --shadow-stationary: none;
+}
+
+/* sticky003 */
+
+.canvas-node:has(.sticky003) {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 458px;
+    height: 331px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+.canvas-node-container:has(.sticky003) {
+    border: none;
+    border-radius: 0;
+    background: #d7ffc1;
+}
+.canvas-wrapper:has(.sticky003) {
+  --shadow-stationary: none;
+}
+
+/* sticky004 */
+
+.canvas-node:has(.sticky004) {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 458px;
+    height: 331px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+.canvas-node-container:has(.sticky004) {
+    border: none;
+    border-radius: 0;
+    background: #cdfffd;
+}
+.canvas-wrapper:has(.sticky004) {
+  --shadow-stationary: none;
+}
+
+/* sticky005 */
+
+.canvas-node:has(.sticky005) {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 458px;
+    height: 331px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+.canvas-node-container:has(.sticky005) {
+    border: none;
+    border-radius: 0;
+    background: #c1d2ff;
+}
+.canvas-wrapper:has(.sticky005) {
+  --shadow-stationary: none;
+}
+
+/* sticky006 */
+
+.canvas-node:has(.sticky006) {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 458px;
+    height: 331px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+.canvas-node-container:has(.sticky006) {
+    border: none;
+    border-radius: 0;
+    background: #fbc1ff;
+}
+.canvas-wrapper:has(.sticky006) {
+  --shadow-stationary: none;
+}
+
+/* card001 */
+
+.canvas-node:has(.card001) {
+    border: none;
+    position: absolute;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+.canvas-node-container:has(.card001) {
+    border: 9px dashed #afafaf;
+    border-radius: 50px;
+    background: #e4e4e4;
+}
+.canvas-wrapper:has(.card001) {
+  --shadow-stationary: none;
+}
+
+/* shape001 point*/
+
+.canvas-node:has(.shape001) {
+    position: absolute;
+}
+.canvas-node-container:has(.shape001) {
+    border: 10px solid #ff6262;
+    border-radius: 50%;
+    background: #ff9b9b;
+    box-sizing: border-box;
+}
+.canvas-wrapper:has(.shape001) {
+  --shadow-stationary: none;
+}
+
+/* shape002 circle*/
+
+.canvas-node:has(.shape002) {
+    position: absolute;
+}
+.canvas-node-container:has(.shape002) {
+    border: 5px solid #989898;
+    border-radius: 50%;
+    background: #dedede;
+    box-sizing: border-box;
+    padding: 3em;
+}
+.canvas-wrapper:has(.shape002) {
+  --shadow-stationary: none;
+}

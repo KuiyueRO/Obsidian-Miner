@@ -1,0 +1,134 @@
+body{
+  --bannericon-wh: 5em;
+  --bannericon-top: 5.5em;
+  --bannerimg-height: 10em;
+  --bannericon-circle-radius:5em;
+}
+
+/*这个css片段用于制作页面横幅*/
+
+/*
+.bannerimg .markdown-preview-section{
+  padding-top: 10em !important;
+}
+.bannericon .markdown-preview-section{
+  padding-top: 5em;
+}
+*/
+
+/*空出在距离*/
+
+.markdown-reading-view .bannerimg{
+  padding-top: 10em;
+  padding-bottom: 2em;
+}
+
+.canvas-node-content.markdown-embed.is-loaded .bannerimg {
+  padding-top: 9em;
+  padding-bottom: 2em;
+}
+
+/*
+.markdown-reading-view .bannericon{
+  padding-top: 5em;
+  padding-bottom: 2em;
+}*/
+
+/*兼容Breadcrumbs Plugin: Trail View*/
+.bannerimg .BC-trail,.bannericon .BC-trail {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 1.5em !important;
+}
+
+/*横幅图片*/
+span[src$="bannerimg"] img{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 10em;
+  min-height: 10em;
+  width: 100%;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0px;
+}
+
+/*横幅图标*/
+span[src$="bannericonl"] img{
+  object-fit: cover;
+  width: 5em !important;
+  height: 5em !important;
+  
+  position: absolute;
+  top: 5.5em;
+  left: var(--h1-style);
+
+  border-radius:15px;
+  border: solid 0.1em;
+  border-color: var(--color-base-00);
+  box-shadow: none;
+}
+
+span[src$="bannericonlc"] img{
+  object-fit: cover;
+  width: 5em !important;
+  height: 5em !important;
+  
+  position: absolute;
+  top: 5.5em;
+  left: initial;
+
+  border-radius:5em;
+  border: solid 0.1em;
+  border-color: var(--color-base-00);
+  box-shadow: none;
+}
+
+span[src$="bannericonc"] img{
+  object-fit: cover;
+  width: 5em !important;
+  height: 5em !important;
+  
+  position: absolute;
+  top: 5.5em;
+  left: calc(50% - 2.5em);
+
+  border-radius:15px;
+  border: solid 0.1em;
+  border-color: var(--color-base-00);
+  box-shadow: none;
+}
+
+span[src$="bannericoncc"] img{
+  object-fit: cover;
+  width: 5em !important;
+  height: 5em !important;
+  
+  position: absolute;
+  top: 5.5em;
+  left: calc(50% - 2.5em);
+
+  border-radius:5em;
+  border: solid 0.1em;
+  border-color: var(--color-base-00);
+  box-shadow: none;
+  background-color: #fff;
+}
+
+/*Banner title align Banner标题定位*/
+.banner-title-center .inline-title {
+  text-align: center !important;
+}
+
+/*
+.banner-title-left .inline-title {
+  text-align: left !important;
+  left: calc(var(--bannericon-wh) * 1.4) !important;
+  top: calc(var(--bannericon-top) - var(--title-top));
+  position:absolute;
+}
+*/
+

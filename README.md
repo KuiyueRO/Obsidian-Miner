@@ -1,14 +1,9 @@
 # Obsidian-Miner
 Personal Obsidian Enhanced CSS snippet.
 
-WIP...
-
-- TiddlyWiki Like Snippets.css
-- Miner.css
-- HeadingIcon.css
-- canvas.css
-
-> The following content is rendered by **Google Translate**. (This sentence is also translated by Google Translate.😗)
+> The following content is translated by **Google Translate**. 
+>
+>If you like it, please give me a **⭐star** for encouragement.😗
 
 ---
 
@@ -24,22 +19,12 @@ I'm a CSS beginner and these codes helped me a lot.
 
 ---
 
-## TiddlyWiki Like Snippets.css
-[TiddlyWiki](https://tiddlywiki.com/). I like the view of TiddlyWiki, it is very convenient on mobile phone and computer.
-![](/res/TiddlyWikiLike.gif)
+## Showcase
 
----
+WIP...
 
-## Miner.css
-A little "optimization" for mobile.
-![](/res/MinerMobile.gif) 
-![](/res/MinerPad.gif)
-![](/res/MinerPC.gif)
-
----
-
-## HeadingIcon.css
-
-Add icons for all Headings in reading mode
-
-![Alt text](res/HeadingIcon.png)
+- [TiddlyWikiLike](md/TiddlyWikiLike.md)
+- [Miner](md/Miner.md)
+- [Heading Icon](md/HeadingIcon.md)
+- [Miner Canvas](md/MinerCanvas.md)
+- [Miner Banner](md/MinerBanner.md)
