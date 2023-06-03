@@ -35,4 +35,8 @@ A little "optimization" for mobile.
 
 ---
 
+## HeadingIcon.css
 
+Add icons for all Headings in reading mode
+
+![Alt text](res/HeadingIcon.png)
