@@ -3,8 +3,10 @@ Personal Obsidian Enhanced CSS snippet.
 
 WIP...
 
-- [TiddlyWiki Like Snippets.css](/MD/TiddlyWiki_Like_Snippets.css)
-- [Miner.css](/MD/Miner.css)
+- TiddlyWiki Like Snippets.css
+- Miner.css
+- HeadingIcon.css
+- canvas.css
 
 > The following content is rendered by **Google Translate**. (This sentence is also translated by Google Translate.😗)
 
@@ -17,6 +19,7 @@ I'm a CSS beginner and these codes helped me a lot.
 - Efemkay's [modular-css-layout](https://github.com/efemkay/obsidian-modular-css-layout)
 - AnubisNekhet's [Capacities-like sidebars](https://gist.github.com/AnubisNekhet/33ceb77eb450d78b2833e77cdb8e3394)
 - SailKiteV's [Obsidian-Snippets-and-Demos](https://github.com/sailKiteV/Obsidian-Snippets-and-Demos)
+- [Quick Guide: Customizing your canvas](https://forum.obsidian.md/t/quick-guide-customizing-your-canvas-rotating-nodes-removing-borders-backgrounds/52125)
 - And more...
 
 ---
