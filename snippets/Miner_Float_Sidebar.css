@@ -1,0 +1,40 @@
+.workspace-split.mod-horizontal.mod-left-split {
+    position: fixed;
+    display: flex;
+    overflow:scroll;
+    font-size: var(--font-ui-small);
+    min-width: 283px;
+    max-width: 283px;
+    width: 283px;
+    height:85%;
+    z-index: var(--layer-popover);
+    margin: 0;
+    border: solid 2px var(--sidebarcolor);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: var(--size-4-3);
+    padding-top: var(--safe-area-inset-top);
+    background-color: var(--background-primary);
+    align-self:center;
+    transform: translateX(-275px) translateZ(0px);
+    transition: transform .5s;
+}
+
+.workspace-split.mod-horizontal.mod-left-split:hover{
+    position: fixed;
+    display: flex;
+    overflow: visible;
+    font-size: var(--font-ui-small);
+    height:85%;
+    z-index: var(--layer-popover);
+    margin: 0;
+    border: solid 2px var(--sidebarcolor);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: var(--size-4-3);
+    padding-top: var(--safe-area-inset-top);
+    background-color: var(--background-primary);
+    align-self:center;
+    transform: translateX(0px) translateZ(0px);
+    transition: transform .5s;
+}

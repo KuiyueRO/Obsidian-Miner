@@ -23,6 +23,7 @@ I'm a CSS beginner and these codes helped me a lot.
 
 WIP...
 
+- [⭐Float Sidebar](md/Miner_Float_Sidebar.md)
 - [TiddlyWikiLike](md/TiddlyWikiLike.md)
 - [Miner](md/Miner.md)
 - [Heading Icon](md/HeadingIcon.md)
