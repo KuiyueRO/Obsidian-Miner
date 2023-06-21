@@ -1,46 +1,75 @@
+/*
+Author: KuiyueRO
+URL: https://github.com/KuiyueRO/Obsidian-Miner
+*/
+
 /*制作一个瀑布流的CSS*/
+body{
+    --tiddlyradius: 0.5em;
+}
 
 /*让隐藏的标签页分列显示出来*/
-div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-active.mod-top>.workspace-tab-container {
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: scroll;
     overflow-y: 0;
     overflow-wrap: break-word;
+    height:auto;
+    contain:layout inline-size;
 }
 
-div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-active.mod-top>.workspace-tab-container>.workspace-leaf {
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container>.workspace-leaf {
     display: flex !important;
-    position: inherit;
-    flex-direction:column;
-    min-height: 100%;
-    height: 100%;
+    position: unset;
+    height: unset;
+    overflow: unset;
+    contain: unset !important;
+    border: solid 2px rgba(46, 46, 46, 0.179); 
+    border-radius: var(--tiddlyradius); 
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    box-shadow: 0px 0px 5px 2px rgba(136, 136, 136, 0.1); 
+    flex-direction: column; 
 }
 
-/*只显示激活页面的title bar*/
-/*bug*/
-/*
-.view-header {
-    display: none !important;
-}
-.is-focused .mod-root .workspace-tabs .workspace-leaf.mod-active .view-header {
-    display: flex !important;
-    position: absolute;
-    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
-}*/
-
-/*下面是一些页面的调整*/
-
-/*底部padding调整*/
-/*bug*/
-/*
-.contextual-typography .markdown-preview-view.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-    padding-bottom: var(--line-height) !important;
+.markdown-preview-sizer.markdown-preview-section,.cm-content.cm-lineWrapping{
+    padding-bottom: 1em !important;
 }
 
-.workspace-split.mod-root .view-content {
-    background-color: var(--background-primary);
-    height: max-content;
+.markdown-source-view.mod-cm6 {
+    height: auto;
+    display: unset; 
+    flex-direction: column;
+    overflow-y: visible;
 }
-*/
+
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content {
+    display: flex ;
+    height: auto ;
+    border-radius: var(--tiddlyradius); 
+    border-radius: var(--tiddlyradius); 
+}
+
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content[data-type$="empty"] {
+    display: flex ;
+    height: 45em ;
+}
+
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content[data-type$="canvas"] {
+    display: flex ;
+    height: 90vh ;
+}
+
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content[data-type$="pdf"] {
+    display: flex ;
+    height: 90vh ;
+}
+
+div.app-container>.horizontal-main-container>.workspace>.workspace-split.mod-vertical.mod-root>.workspace-tabs.mod-top>.workspace-tab-container>.workspace-leaf>.workspace-leaf-content[data-type$="excalidraw"] {
+    display: flex ;
+    height: 90vh ;
+}
