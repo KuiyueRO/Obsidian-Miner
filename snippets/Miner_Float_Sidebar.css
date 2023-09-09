@@ -1,40 +1,102 @@
 .workspace-split.mod-horizontal.mod-left-split {
     position: fixed;
     display: flex;
-    overflow:scroll;
-    font-size: var(--font-ui-small);
-    min-width: 283px;
-    max-width: 283px;
     width: 283px;
     height:85%;
     z-index: var(--layer-popover);
     margin: 0;
-    border: solid 2px var(--sidebarcolor);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-left: var(--size-4-3);
-    padding-top: var(--safe-area-inset-top);
-    background-color: var(--background-primary);
     align-self:center;
-    transform: translateX(-275px) translateZ(0px);
+    background-color: var(--background-primary);
+    transform: translateX(-100%) translateZ(0px);
+    transition: transform .5s;
+    transition-delay: 1s;
+}
+
+.workspace-tabs.mod-top.mod-top-left-space{
+    border-top: solid 3px var(--divider-color);
+    border-right: solid 3px var(--divider-color);
+    border-bottom: solid 3px var(--divider-color);
+    border-bottom-right-radius: var(--modal-radius);
+    border-top-right-radius: var(--modal-radius);
+    box-shadow: var(--shadow-s);
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+    border-right-style:unset;
+    border-right-width:unset;
+}
+
+.workspace-tab-header-container::before:hover{
+    overflow: visible;
+    height:85%;
+    transform: translateX(0px) translateZ(0px);
     transition: transform .5s;
 }
 
-.workspace-split.mod-horizontal.mod-left-split:hover{
-    position: fixed;
-    display: flex;
+.workspace-tab-header-container::before:hover{
     overflow: visible;
-    font-size: var(--font-ui-small);
     height:85%;
-    z-index: var(--layer-popover);
-    margin: 0;
-    border: solid 2px var(--sidebarcolor);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-left: var(--size-4-3);
-    padding-top: var(--safe-area-inset-top);
-    background-color: var(--background-primary);
-    align-self:center;
     transform: translateX(0px) translateZ(0px);
     transition: transform .5s;
+}
+
+.workspace-tab-header-container-inner{
+    overflow: visible;
+    height:85%;
+    transform: translateX(0px) translateZ(0px);
+    transition: transform .5s;
+}
+
+.workspace-split.mod-horizontal.mod-left-split:hover {
+    overflow: visible;
+    height:85%;
+    transform: translateX(0px) translateZ(0px);
+    transition: transform .5s;
+}
+
+.workspace-split.mod-horizontal.mod-left-split:focus-within {
+    overflow: visible;
+    height:85%;
+    transform: translateX(0px) translateZ(0px);
+    transition: transform .5s;
+}
+
+body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-left-split > div.workspace-tabs.mod-top.mod-top-left-space > div.workspace-tab-header-container > div.workspace-tab-header-container-inner{
+    transform: translateX(0px) translateZ(0px);
+    transition: transform .5s;
+}
+
+.workspace-split.mod-horizontal.mod-left-split::before {
+    content: "";
+    text-align: end !important;
+    background-color: var(--divider-color);
+    position: absolute;
+    display: flex;
+    width: 10px;
+    height: 120px;
+    top:calc(50% - 60px);
+    right: -10px;
+    z-index: var(--layer-popover);
+    border-bottom-right-radius: var(--input-radius);
+    border-top-right-radius: var(--input-radius);
+    box-shadow: var(--shadow-s);
+}
+
+.workspace-split.mod-horizontal.mod-left-split::after {
+    content: "";
+    text-align: end !important;
+    background-color: var(--color-base-50);
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 90px;
+    top:calc(50% - 45px);
+    right: -8px;
+    z-index: var(--layer-popover);
+    border-radius: var(--input-radius);
+}
+
+body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-left-split > div.workspace-tabs.mod-top.mod-top-left-space > div.workspace-tab-header-container {
+    flex-direction:column;
+    align-items: center;
 }
