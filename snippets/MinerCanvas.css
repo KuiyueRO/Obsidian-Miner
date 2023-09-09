@@ -1,5 +1,25 @@
-/* sticky001 */
+/* custom color sticky */
+.canvas-node:has(.stickycustom) {
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: absolute;
+  width: 458px;
+  height: 331px;
+  box-shadow: 0px 4px 4px rgba(var(--canvas-color), 0.4 ), 0px 7px 5px rgba(var(--canvas-color), 0.4) ;
+}
+.canvas-node-container:has(.stickycustom) {
+  border: none;
+  border-radius: 0;
+  background: rgba(var(--canvas-color), 0.2);
+  backdrop-filter: blur(6px);
+}
 
+.canvas-wrapper:has(.stickycustom) {
+--shadow-stationary: none;
+}
+
+/* sticky001 */
 .canvas-node:has(.sticky001) {
     border: none;
     box-shadow: none;
@@ -19,7 +39,6 @@
 }
 
 /* sticky002 */
-
 .canvas-node:has(.sticky002) {
     border: none;
     box-shadow: none;
@@ -39,7 +58,6 @@
 }
 
 /* sticky003 */
-
 .canvas-node:has(.sticky003) {
     border: none;
     box-shadow: none;
@@ -59,7 +77,6 @@
 }
 
 /* sticky004 */
-
 .canvas-node:has(.sticky004) {
     border: none;
     box-shadow: none;
@@ -79,7 +96,6 @@
 }
 
 /* sticky005 */
-
 .canvas-node:has(.sticky005) {
     border: none;
     box-shadow: none;
@@ -99,7 +115,6 @@
 }
 
 /* sticky006 */
-
 .canvas-node:has(.sticky006) {
     border: none;
     box-shadow: none;
@@ -119,7 +134,6 @@
 }
 
 /* card001 */
-
 .canvas-node:has(.card001) {
     border: none;
     position: absolute;
@@ -136,7 +150,6 @@
 }
 
 /* shape001 point*/
-
 .canvas-node:has(.shape001) {
     position: absolute;
 }
@@ -151,7 +164,6 @@
 }
 
 /* shape002 circle*/
-
 .canvas-node:has(.shape002) {
     position: absolute;
 }
