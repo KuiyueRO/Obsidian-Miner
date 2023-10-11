@@ -29,608 +29,427 @@ description: √
 
 */
 
-body{
-  --bannericon-wh: 5em;
-  --bannericon-top: 5.5em;
-  --bannerimg-height: 11em;
-  --bannericon-circle-radius:5em;
-  --banneremojiicon-wh: 80px;
+body {
+    --bannericon-wh: 5em;
+    --bannericon-top: 5.5em;
+    --bannerimg-height: 11em;
+    --bannericon-circle-radius: 5em;
+    --bannericon-square-radius: 0.75em;
+    --bannericon-border-width: 0.175em;
 }
 
-/*Page Padding Top*/
-.markdown-reading-view .bannerimg{
-  padding-top: var(--bannerimg-height) !important;
-  padding-bottom: 2em !important;
+.markdown-reading-view .bannerimg {
+    padding-bottom: 2em !important;
+    padding-top: var(--bannerimg-height) !important;
 }
+
 .canvas-node-content.markdown-embed .bannerimg {
-  padding-top: 11em !important;
+    padding-top: 11em !important;
 }
 
-/*Banner Image*/
-span[src$="bannerimg"] img{
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 10em;
-  min-height: 10em;
-  width: 100%;
-  border-radius: 0px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 0px;
-
-  z-index: 9;
+span[src$="bannerimg"] img {
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0px;
+    max-height: 10em;
+    min-height: 10em;
+    object-fit: cover;
+    border-radius: 0px;
+    position: absolute;
 }
 
-/*Banner Icon*/
-span[src$="bannericonl"] img{
-  display: flex !important;
-
-  object-fit: cover;
-  width: 5em !important;
-  height: 5em !important;
-  
-  position: absolute;
-  top: 5.5em;
-  left: var(--h1-style);
-
-  border-radius:15px !important;
-  border: 0.175em solid var(--background-secondary-alt);
-  box-shadow: var(--shadow-l);
-  background-color: var(--background-secondary-alt);
-
-  z-index: 9;
+span[src$="bannericonl"] img,
+span[src$="bannericonlc"] img,
+span[src$="bannericonc"] img,
+span[src$="bannericoncc"] img {
+    top: var(--bannericon-top);
+    width: var(--bannericon-wh) !important;
+    height: var(--bannericon-wh) !important;
+    z-index: 9;
+    object-fit: cover;
+    position: absolute;
+    box-shadow: var(--shadow-l);
+    background-color: var(--background-secondary-alt);
+    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
 }
 
-span[src$="bannericonlc"] img{
-  object-fit: cover;
-  width: 5em !important;
-  height: 5em !important;
-  
-  position: absolute;
-  top: 5.5em;
-  left: initial;
-
-  border-radius:5em !important;
-  border: 0.175em solid var(--background-secondary-alt);
-  box-shadow: var(--shadow-l);
-  background-color: var(--background-secondary-alt);
-
-  z-index: 9;
+span[src$="bannericonl"] img {
+    left: var(--h1-style);
+    border-radius: var(--bannericon-square-radius) !important;
 }
 
-span[src$="bannericonc"] img{
-  object-fit: cover;
-  width: 5em !important;
-  height: 5em !important;
-  
-  position: absolute;
-  top: 5.5em;
-  left: calc(50% - 2.5em);
-
-  border-radius:15px !important;
-  border: 0.175em solid var(--background-secondary-alt);
-  box-shadow: var(--shadow-l);
-  background-color: var(--background-secondary-alt);
-
-  z-index: 9;
+span[src$="bannericonlc"] img {
+    left: initial;
+    border-radius: var(--bannericon-circle-radius) !important;
 }
 
-span[src$="bannericoncc"] img{
-  object-fit: cover;
-  width: 5em !important;
-  height: 5em !important;
-  
-  position: absolute;
-  top: 5.5em;
-  left: calc(50% - 2.5em);
-
-  border-radius:5em !important;
-  border: 0.175em solid var(--background-secondary-alt);
-  box-shadow: var(--shadow-l);
-  background-color: var(--background-secondary-alt);
-
-  z-index: 9;
+span[src$="bannericonc"] img {
+    left: calc(50% - 2.5em);
+    border-radius: var(--bannericon-square-radius) !important;
 }
 
-/*Banner title align Banner标题定位*/
+span[src$="bannericoncc"] img {
+    left: calc(50% - 2.5em);
+    border-radius: var(--bannericon-circle-radius) !important;
+}
+
+/*=======Title Align Center=======*/
 .banner-title-center .inline-title {
-  text-align: center !important;
+    text-align: center !important;
 }
 
-/*
-.banner-title-left .inline-title {
-  text-align: left !important;
-  left: calc(var(--bannericon-wh) * 1.4) !important;
-  top: calc(var(--bannericon-top) - var(--title-top));
-  position:absolute;
-}
-*/
-
-
-/*Plugin Fix*/
-
-/*strange new world, hide image button*/
-
-.snw-reference[data-snw-reallink$="bannerimg"] {
-  display: none !important;
+/*=======CallOut Support=======*/
+/*Banner Image*/
+.callout[data-callout="bannerimage"] .callout-content {
+    top: 0;
+    left: 0;
+    height: 10em;
+    display: flex;
+    padding: unset;
+    overflow: clip;
+    position: absolute;
+    align-items: center;
+    object-fit: inherit !important;
 }
 
-.snw-reference[data-snw-reallink*="bannericon"] {
-  display: none !important;
+.callout[data-callout="bannerimage"] .callout-content>p,
+.callout[data-callout="bannerimage"] .callout-content>p>span {
+    margin: unset;
+    object-fit: inherit;
 }
 
-/*Breadcrumbs, trail view move down*/
-.bannerimg .BC-trail,.bannericon .BC-trail {
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 5px;
-  padding: 5px;
-  margin-top: 1.5em !important;
+.callout[data-callout="bannerimage"] .callout-content>p>span>img {
+    margin: unset;
+    width: 1000000em !important;
+    height: 10em;
+    object-fit: cover;
 }
 
-.bannerimg .BC-trail .markdown-reading-view>.markdown-preview-view.is-readable-line-width, .markdown-source-view.is-readable-line-width .cm-sizer {
-    padding-top: unset;
+/*Description left and Description center*/
+.description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
+    margin-bottom: calc(5 * var(--inline-title-margin-bottom));
 }
 
-.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view:has([alt*="bannerimg"])::before {
-  content: unset !important;
+.markdown-reading-view .callout[data-callout="bannerdescription"] .callout-content {
+    top: 13.55em;
+    overflow: hidden;
+    position: absolute;
+    left: var(--h1-style);
+    border-left: var(--h1-style) solid;
 }
 
-/*
-==== emoji ====
-/*
-== DataView == inline field
-Template: [bannericonc::emoji]
-Abandoned because Huawei WebView is too old and does not support :has()
-*/
+.canvas .callout[data-callout="bannerdescription"] .callout-content {
+    top: 13.55em;
+    overflow: hidden;
+    /*position: absolute;*/
+    left: var(--h1-style);
+    border-left: var(--h1-style) solid;
+}
 
-/*
-Callout Support
-WIP
-*/
-.callout[data-callout="banner"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  width: 100%;
+.canvas .callout[data-callout="bannerdescriptionc"] .callout-content {
+    left: 0;
+    top: 13.55em;
+    overflow: hidden;
+    /*position: absolute;*/
+    border-left: var(--h1-style) solid;
 }
-.callout[data-callout="banner"] .callout-title {
-  display: none;
+
+.callout[data-callout="bannerdescription"] .callout-content>p {
+    padding-top: 8px;
+    font-size: var(--size-4-3);
+    color: var(--color-base-60);
+    height: calc(var(--size-4-4) * 2);
+    text-overflow: ellipsis !important;
+    border-top: 2px solid var(--color-base-100);
+    margin-right: calc(var(--file-margins) * 2);
+    border-image: linear-gradient(to right,
+            var(--color-base-100),
+            var(--color-base-00)) 1;
 }
-.callout[data-callout="banner"] .callout-icon {
-  display: none;
+
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content>p,
+.canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
+    padding-top: 8px;
+    text-align: center;
+    font-size: var(--size-4-3);
+    color: var(--color-base-60);
+    height: calc(var(--size-4-4) * 2);
+    text-overflow: ellipsis !important;
+    border-top: 2px solid var(--color-base-100);
+    border-image: linear-gradient(to right,
+            var(--color-base-00),
+            var(--color-base-100),
+            var(--color-base-00)) 1;
 }
-.callout[data-callout="banner"] .callout-icon::after {
-  display: none;
+
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content>p {
+    width: 100% !important;
 }
-.callout[data-callout="banner"] .callout-fold {
-  display: none;
+
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content {
+    position: absolute;
+    left: 0;
+    top: 13.55em;
+    padding-left: var(--file-margins) !important;
+    padding-right: var(--file-margins) !important;
+    overflow: hidden;
+}
+
+
+
+/*Left square Icon*/
+.callout[data-callout="bannericonl"] .callout-content {
+    top: 5.5em;
+    overflow: visible;
+    position: absolute;
+    left: var(--h1-style);
+}
+
+.callout[data-callout="bannericonl"] .callout-content>p {
+    display: flex;
+    font-size: 5em;
+    aspect-ratio: 1;
+    position: relative;
+    align-items: center;
+
+    justify-content: center;
+    border: unset !important;
+    width: calc(var(--bannericon-wh) / 5);
+    height: calc(var(--bannericon-wh) / 5);
+    margin: unset;
+    object-fit: inherit;
+}
+
+.callout[data-callout="bannericonl"] .callout-content>p>span>img {
+    display: flex;
+    aspect-ratio: 1;
+    box-shadow: var(--shadow-l);
+    font-size: var(--font-text-size);
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var(--background-secondary-alt);
+    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+    left: var(--h1-style);
+    border-radius: var(--bannericon-square-radius) !important;
+}
+
+/* Left Circle Icon*/
+.callout[data-callout="bannericonlc"] .callout-content {
+    top: 5.5em;
+    overflow: visible;
+    position: absolute;
+    left: var(--h1-style);
+}
+
+.callout[data-callout="bannericonlc"] .callout-content>p {
+    display: flex;
+    font-size: 5em;
+    aspect-ratio: 1;
+    position: relative;
+    align-items: center;
+
+    justify-content: center;
+    border: unset !important;
+    width: calc(var(--bannericon-wh) / 5);
+    height: calc(var(--bannericon-wh) / 5);
+    margin: unset;
+    object-fit: inherit;
+}
+
+.callout[data-callout="bannericonlc"] .callout-content>p>span>img {
+    display: flex;
+    aspect-ratio: 1;
+    box-shadow: var(--shadow-l);
+    font-size: var(--font-text-size);
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var(--background-secondary-alt);
+    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+    border-radius: var(--bannericon-circle-radius) !important;
+    left: var(--h1-style);
+}
+
+/*Center square Icon*/
+.callout[data-callout="bannericonc"] .callout-content {
+    top: 5.5em;
+    display: flex;
+    overflow: visible;
+    position: absolute;
+    left: calc(50% - 2.5em);
+}
+
+.callout[data-callout="bannericonc"] .callout-content>p {
+    display: flex;
+    font-size: 5em;
+    aspect-ratio: 1;
+    position: relative;
+    align-items: center;
+
+    justify-content: center;
+    border: unset !important;
+    width: calc(var(--bannericon-wh) / 5);
+    height: calc(var(--bannericon-wh) / 5);
+    margin: unset;
+    object-fit: inherit;
+}
+
+.callout[data-callout="bannericonc"] .callout-content>p>span>img {
+    display: flex;
+    aspect-ratio: 1;
+    box-shadow: var(--shadow-l);
+    font-size: var(--font-text-size);
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var(--background-secondary-alt);
+    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+    left: var(--h1-style);
+    border-radius: var(--bannericon-square-radius) !important;
+}
+
+/*Center Circle Icon*/
+.callout[data-callout="bannericoncc"] .callout-content {
+    top: 5.5em;
+    overflow: visible;
+    position: absolute;
+    left: calc(50% - 40px);
+}
+
+.callout[data-callout="bannericoncc"] .callout-content>p {
+    display: flex;
+    font-size: 5em;
+    aspect-ratio: 1;
+    position: relative;
+    align-items: center;
+
+    justify-content: center;
+    border: unset !important;
+    width: calc(var(--bannericon-wh) / 5);
+    height: calc(var(--bannericon-wh) / 5);
+    margin: unset;
+    object-fit: inherit;
+}
+
+.callout[data-callout="bannericoncc"] .callout-content>p>span>img {
+    display: flex;
+    aspect-ratio: 1;
+    box-shadow: var(--shadow-l);
+    font-size: var(--font-text-size);
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var(--background-secondary-alt);
+    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+    border-radius: var(--bannericon-circle-radius) !important;
+    left: var(--h1-style);
+}
+
+/*Hide Default CallOut Style*/
+.callout[data-callout="banner"] .callout-title,
+.callout[data-callout="banner"] .callout-icon,
+.callout[data-callout="banner"] .callout-icon::after,
+.callout[data-callout="banner"] .callout-fold,
+.callout[data-callout="bannerimage"] .callout-title,
+.callout[data-callout="bannerimage"] .callout-icon,
+.callout[data-callout="bannerimage"] .callout-icon::after,
+.callout[data-callout="bannerimage"] .callout-fold,
+.callout[data-callout="bannerdescription"] .callout-title,
+.callout[data-callout="bannerdescription"] .callout-icon,
+.callout[data-callout="bannerdescription"] .callout-icon::after,
+.callout[data-callout="bannerdescription"] .callout-fold,
+.callout[data-callout="bannerdescriptionc"] .callout-title,
+.callout[data-callout="bannerdescriptionc"] .callout-icon,
+.callout[data-callout="bannerdescriptionc"] .callout-icon::after,
+.callout[data-callout="bannerdescriptionc"] .callout-fold,
+.callout[data-callout="bannericonl"] .callout-title,
+.callout[data-callout="bannericonl"] .callout-icon,
+.callout[data-callout="bannericonl"] .callout-icon::after,
+.callout[data-callout="bannericonl"] .callout-fold,
+.callout[data-callout="bannericonlc"] .callout-title,
+.callout[data-callout="bannericonlc"] .callout-icon,
+.callout[data-callout="bannericonlc"] .callout-icon::after,
+.callout[data-callout="bannericonlc"] .callout-fold,
+.callout[data-callout="bannericonc"] .callout-title,
+.callout[data-callout="bannericonc"] .callout-icon,
+.callout[data-callout="bannericonc"] .callout-icon::after,
+.callout[data-callout="bannericonc"] .callout-fold,
+.callout[data-callout="bannericoncc"] .callout-title,
+.callout[data-callout="bannericoncc"] .callout-icon,
+.callout[data-callout="bannericoncc"] .callout-icon::after,
+.callout[data-callout="bannericoncc"] .callout-fold {
+    display: none;
+}
+
+.callout[data-callout="bannericonl"],
+.callout[data-callout="bannericonlc"],
+.callout[data-callout="bannericonc"],
+.callout[data-callout="bannericoncc"],
+.callout[data-callout="banner"],
+.callout[data-callout="bannerdescription"],
+.callout[data-callout="bannerdescriptionc"],
+.callout[data-callout="bannerimage"] {
+    width: 100%;
+    margin: unset;
+    padding: unset;
+    border-style: unset;
+    border-color: unset;
+    border-width: unset;
+    border-radius: unset;
+    mix-blend-mode: unset;
+    background-color: unset;
+    overflow: visible !important;
 }
 
 .callout[data-callout="bannerimage"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  width: 100%;
-}
-.callout[data-callout="bannerimage"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannerimage"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannerimage"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannerimage"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannerimage"] .callout-content {
-  display: flex;
-  height: 10em;
-  object-fit: cover !important;
-  width: 100%;
-  position: absolute;
-  padding: unset;
-  top: 0;
-  left: 0;
-  overflow: clip;
+    display: flex;
+    align-items: center;
+    width: auto !important;
+    object-fit: cover !important;
 }
 
-/*wip for imageicon*/
-.callout[data-callout="bannerimage"] .callout-content > p {
-  margin: unset;
-
-  object-fit: inherit;
-}
-
-/*======================*/
-.description .markdown-preview-sizer.markdown-preview-section > .mod-header > .inline-title {
-  margin-bottom: calc(4 * var(--inline-title-margin-bottom));
-}
-
-/*canvas fixed : top empty content */
-.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view::before, .canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view::after {
-  content: none;
-  display: block;
-}
-
-.callout[data-callout="bannerdescription"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  margin-right: auto;
-}
-.callout[data-callout="bannerdescription"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannerdescription"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannerdescription"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannerdescription"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannerdescription"] .callout-content {
-  position: absolute;
-  display: flex;
-  top: 13.55em;
-  left: var(--h1-style);
-}
-.callout[data-callout="bannerdescription"] .callout-content > p{
-  display: flex;
-  width : auto;
-  color: var(--color-base-60);
-  font-size: var(--size-4-3);
-  white-space: wrap;
-  overflow: hidden !;
-  text-overflow: ellipsis !important;
-  padding-top: 8px;
-  border-top: 2px solid var(--color-base-100);
-  border-image: linear-gradient(to right, var(--color-base-100), var(--color-base-00)) 1;
-  
-}
-
-/*===*/
-
+.callout[data-callout="bannerdescription"],
 .callout[data-callout="bannerdescriptionc"] {
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  top: 20em;
+    top: 20em;
 }
 
-.callout[data-callout="bannerdescriptionc"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannerdescriptionc"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannerdescriptionc"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannerdescriptionc"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannerdescriptionc"] .callout-content {
-  top: 13.55em;
-  position:absolute;
-}
-.callout[data-callout="bannerdescriptionc"] .callout-content > p{
-  color: var(--color-base-60);
-  font-size: var(--size-4-3);
-  overflow: scroll;
-  padding-top: 8px;
-  border-top: 2px solid var(--color-base-100);
-  border-image: linear-gradient(to right, var(--color-base-00), var(--color-base-100), var(--color-base-00)) 1;
-  text-align: center;
+/*=======Plugin Support=======*/
+/*Strange New World*/
+.snw-reference[data-snw-reallink$="bannerimg"],
+.snw-reference[data-snw-reallink*="bannericon"] {
+    display: none !important;
 }
 
-/*====================================*/
-
-/*left*/
-.callout[data-callout="bannericonl"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  width: 100%;
-}
-.callout[data-callout="bannericonl"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannericonl"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannericonl"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannericonl"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannericonl"] .callout-content {
-  position: absolute;
-  display: flex;
-  overflow: visible;
-  top: 5.5em;
-  left: var(--h1-style);
-  text-align: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: center;
-}
-.callout[data-callout="bannericonl"] .callout-content > p{
-  display: grid;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: unset !important;
-  box-shadow: var(--shadow-l);
-  border-radius:15px !important;
-  background-color: var(--background-secondary-alt);
-}
-.callout[data-callout="bannericonl"] .callout-content > p {
-  margin: unset;
-
-  object-fit: inherit;
-}
-.callout[data-callout="bannericonl"] .callout-content > p > span {
-
-}
-.callout[data-callout="bannericonl"] .callout-content > p > span > img {
-  display: grid;
-  object-fit: cover;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: 3px solid var(--background-secondary-alt);
-
-  border-radius:15px !important;
+/*Breadcrumbs*/
+.bannerimg .BC-trail,
+.bannericon .BC-trail {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 1.5em !important;
+    border: 1px solid var(--background-modifier-border);
 }
 
-/*left circle*/
-.callout[data-callout="bannericonlc"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  width: 100%;
-}
-.callout[data-callout="bannericonlc"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannericonlc"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannericonlc"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannericonlc"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannericonlc"] .callout-content {
-  position: absolute;
-  display: flex;
-  overflow: visible;
-  top: 5.5em;
-  left: var(--h1-style);
-  text-align: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: center;
-}
-.callout[data-callout="bannericonlc"] .callout-content > p{
-  display: grid;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: unset !important;
-  box-shadow: var(--shadow-l);
-  border-radius:50px !important;
-  background-color: var(--background-secondary-alt);
-}
-.callout[data-callout="bannericonlc"] .callout-content > p {
-  margin: unset;
-
-  object-fit: inherit;
-}
-.callout[data-callout="bannericonlc"] .callout-content > p > span {
-
-}
-.callout[data-callout="bannericonlc"] .callout-content > p > span > img {
-  display: grid;
-  object-fit: cover;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  line-clamp:inherit;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: 3px solid var(--background-secondary-alt);
-
-  border-radius:50px !important;
+.bannerimg .BC-trail .markdown-reading-view>.markdown-preview-view.is-readable-line-width,
+.markdown-source-view.is-readable-line-width .cm-sizer {
+    padding-top: unset;
 }
 
-/*center*/
-.callout[data-callout="bannericonc"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  width: 100%;
-}
-.callout[data-callout="bannericonc"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannericonc"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannericonc"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannericonc"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannericonc"] .callout-content {
-  position: absolute;
-  display: flex;
-  overflow: visible;
-  top: 5.5em;
-  left: calc(50% - 40px);
-  text-align: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: center;
-}
-.callout[data-callout="bannericonc"] .callout-content > p{
-  display: grid;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: unset !important;
-  box-shadow: var(--shadow-l);
-  border-radius:15px !important;
-  background-color: var(--background-secondary-alt);
-}
-.callout[data-callout="bannericonc"] .callout-content > p {
-  margin: unset;
-
-  object-fit: inherit;
-}
-.callout[data-callout="bannericonc"] .callout-content > p > span {
-
-}
-.callout[data-callout="bannericonc"] .callout-content > p > span > img {
-  display: grid;
-  object-fit: cover;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: 3px solid var(--background-secondary-alt);
-
-  border-radius:15px !important;
+/*Canvas*/
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view:has([alt*="bannerimg"])::before {
+    content: unset !important;
 }
 
-/*center circle*/
-.callout[data-callout="bannericoncc"] {
-  overflow:visible !important;
-  border-style: unset;
-  border-color: unset;
-  border-width: unset;
-  border-radius: unset;
-  margin: unset;
-  mix-blend-mode: unset;
-  background-color: unset;
-  padding: unset;
-  width: 100%;
+.canvas .description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
+    margin-bottom: unset;
 }
-.callout[data-callout="bannericoncc"] .callout-title {
-  display: none;
-}
-.callout[data-callout="bannericoncc"] .callout-icon {
-  display: none;
-}
-.callout[data-callout="bannericoncc"] .callout-icon::after {
-  display: none;
-}
-.callout[data-callout="bannericoncc"] .callout-fold {
-  display: none;
-}
-.callout[data-callout="bannericoncc"] .callout-content {
-  position: absolute;
-  display: flex;
-  overflow: visible;
-  top: 5.5em;
-  left: calc(50% - 40px);
-  text-align: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: center;
-}
-.callout[data-callout="bannericoncc"] .callout-content > p{
-  display: grid;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: unset !important;
-  box-shadow: var(--shadow-l);
-  border-radius:50px !important;
-  background-color: var(--background-secondary-alt);
-}
-.callout[data-callout="bannericoncc"] .callout-content > p {
-  margin: unset;
 
-  object-fit: inherit;
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::before,
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::after {
+    content: none;
+    display: block;
 }
-.callout[data-callout="bannericoncc"] .callout-content > p > span {
 
-}
-.callout[data-callout="bannericoncc"] .callout-content > p > span > img {
-  display: grid;
-  object-fit: cover;
-  justify-content:space-around;
-  font-size: 4em;
-  line-height: 72.5px;
-  line-clamp:inherit;
-  width: var(--banneremojiicon-wh);
-  height: var(--banneremojiicon-wh);
-  border: 3px solid var(--background-secondary-alt);
-
-  border-radius:50px !important;
+.canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
+    margin-left: calc(var(--file-margins));
+    margin-right: calc(var(--file-margins));
 }
