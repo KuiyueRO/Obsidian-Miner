@@ -1,3 +1,6 @@
+![image](https://github.com/KuiyueRO/Obsidian-Miner/assets/63145205/ca28100f-df39-4a44-9c62-ac94fbc66b3b)
+
+
 # Obsidian-Miner
 Personal Obsidian Enhanced CSS snippet.
 
