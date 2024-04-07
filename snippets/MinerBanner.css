@@ -30,319 +30,341 @@ description: √
 */
 
 body {
-    --bannericon-wh: 5em;
-    --bannericon-top: 5.5em;
-    --bannerimg-height: 11em;
-    --bannericon-circle-radius: 5em;
-    --bannericon-square-radius: 0.75em;
-    --bannericon-border-width: 0.175em;
+  --bannericon-wh: 5em;
+  /*banner icon embed top*/
+  --bi-et: 4em;
+  --bannericon-top: 5.5em;
+  --bannerimg-height: 11em;
+  --bannericon-circle-radius: 5em;
+  --bannericon-square-radius: 0.75em;
+  --bannericon-border-width: 0.175em;
 }
 
+.Excalidraw-Markdown .bannerimg,
 .markdown-reading-view .bannerimg {
-    padding-bottom: 2em !important;
-    padding-top: var(--bannerimg-height) !important;
+  padding-bottom: 2em !important;
+  padding-top: var(--bannerimg-height) !important;
 }
 
 .canvas-node-content.markdown-embed .bannerimg {
-    padding-top: 11em !important;
+  padding-top: 11em !important;
 }
 
 span[src$="bannerimg"] img {
-    top: 0;
-    left: 0;
-    z-index: 9;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 0px;
-    max-height: 10em;
-    min-height: 10em;
-    object-fit: cover;
-    border-radius: 0px;
-    position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0px;
+  max-height: 10em;
+  min-height: 10em;
+  object-fit: cover;
+  border-radius: 0px;
+  position: absolute;
 }
 
 span[src$="bannericonl"] img,
 span[src$="bannericonlc"] img,
 span[src$="bannericonc"] img,
 span[src$="bannericoncc"] img {
-    top: var(--bannericon-top);
-    width: var(--bannericon-wh) !important;
-    height: var(--bannericon-wh) !important;
-    z-index: 9;
-    object-fit: cover;
-    position: absolute;
-    box-shadow: var(--shadow-l);
-    background-color: var(--background-secondary-alt);
-    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+  top: var(--bannericon-top);
+  width: var(--bannericon-wh) !important;
+  height: var(--bannericon-wh) !important;
+  z-index: 1;
+  object-fit: cover;
+  position: absolute;
+  box-shadow: var(--shadow-l);
+  background-color: var(--background-secondary-alt);
+  border: var(--bannericon-border-width) solid var(--background-secondary-alt);
 }
 
 span[src$="bannericonl"] img {
-    left: var(--h1-style);
-    border-radius: var(--bannericon-square-radius) !important;
+  left: var(--h1-style);
+  border-radius: var(--bannericon-square-radius) !important;
 }
 
 span[src$="bannericonlc"] img {
-    left: initial;
-    border-radius: var(--bannericon-circle-radius) !important;
+  left: initial;
+  border-radius: var(--bannericon-circle-radius) !important;
 }
 
 span[src$="bannericonc"] img {
-    left: calc(50% - 2.5em);
-    border-radius: var(--bannericon-square-radius) !important;
+  left: calc(50% - 2.5em);
+  border-radius: var(--bannericon-square-radius) !important;
 }
 
 span[src$="bannericoncc"] img {
-    left: calc(50% - 2.5em);
-    border-radius: var(--bannericon-circle-radius) !important;
+  left: calc(50% - 2.5em);
+  border-radius: var(--bannericon-circle-radius) !important;
 }
 
 /*=======Title Align Center=======*/
 .banner-title-center .inline-title {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 /*=======CallOut Support=======*/
 /*Banner Image*/
-.callout[data-callout="bannerimage"] .callout-content {
-    top: 0;
-    left: 0;
-    height: 10em;
-    display: flex;
-    padding: unset;
-    overflow: clip;
-    position: absolute;
-    align-items: center;
-    object-fit: inherit !important;
+.Excalidraw-Markdown .callout[data-callout="bannerimage"] .callout-content,
+.markdown-reading-view .callout[data-callout="bannerimage"] .callout-content,
+.canvas .callout[data-callout="bannerimage"] .callout-content {
+  top: 0;
+  left: 0;
+  height: 10em;
+  display: flex;
+  padding: unset;
+  overflow: clip;
+  position: absolute;
+  align-items: center;
+  object-fit: inherit !important;
 }
 
 .callout[data-callout="bannerimage"] .callout-content>p,
 .callout[data-callout="bannerimage"] .callout-content>p>span {
-    margin: unset;
-    object-fit: inherit;
+  margin: unset;
+  object-fit: inherit;
 }
 
 .callout[data-callout="bannerimage"] .callout-content>p>span>img {
-    margin: unset;
-    width: 1000000em !important;
-    height: 10em;
-    object-fit: cover;
+  margin: unset;
+  width: 1000000em !important;
+  height: 10em;
+  object-fit: cover;
 }
 
 /*Description left and Description center*/
 .description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
-    margin-bottom: calc(5 * var(--inline-title-margin-bottom));
+  margin-bottom: calc(5 * var(--inline-title-margin-bottom));
 }
 
+.Excalidraw-Markdown .callout[data-callout="bannerdescription"] .callout-content,
 .markdown-reading-view .callout[data-callout="bannerdescription"] .callout-content {
-    top: 13.55em;
-    overflow: hidden;
-    position: absolute;
-    left: var(--h1-style);
-    border-left: var(--h1-style) solid;
+  top: 13.55em;
+  overflow: hidden;
+  position: absolute;
+  left: var(--h1-style);
+  border-left: var(--h1-style) solid;
 }
 
 .canvas .callout[data-callout="bannerdescription"] .callout-content {
-    top: 13.55em;
-    overflow: hidden;
-    /*position: absolute;*/
-    left: var(--h1-style);
-    border-left: var(--h1-style) solid;
+  top: 13.55em;
+  overflow: hidden;
+  /*position: absolute;*/
+  left: var(--h1-style);
+  border-left: var(--h1-style) solid;
 }
 
 .canvas .callout[data-callout="bannerdescriptionc"] .callout-content {
-    left: 0;
-    top: 13.55em;
-    overflow: hidden;
-    /*position: absolute;*/
-    border-left: var(--h1-style) solid;
+  /*left: 0;*/
+  top: 13.55em;
+  overflow: hidden;
+  /*position: absolute;*/
+  border-left: var(--h1-style) solid;
 }
 
 .callout[data-callout="bannerdescription"] .callout-content>p {
-    padding-top: 8px;
-    font-size: var(--size-4-3);
-    color: var(--color-base-60);
-    height: calc(var(--size-4-4) * 2);
-    text-overflow: ellipsis !important;
-    border-top: 2px solid var(--color-base-100);
-    margin-right: calc(var(--file-margins) * 2);
-    border-image: linear-gradient(to right,
-            var(--color-base-100),
-            var(--color-base-00)) 1;
+  padding-top: 8px;
+  font-size: var(--size-4-3);
+  color: var(--color-base-60);
+  height: calc(var(--size-4-4) * 2);
+  text-overflow: ellipsis !important;
+  border-top: 2px solid var(--color-base-100);
+  margin-right: calc(var(--file-margins) * 2);
+  border-image: linear-gradient(to right,
+      var(--color-base-100),
+      var(--color-base-00)) 1;
 }
 
+.Excalidraw-Markdown .callout[data-callout="bannerdescriptionc"] .callout-content>p,
 .markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content>p,
 .canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
-    padding-top: 8px;
-    text-align: center;
-    font-size: var(--size-4-3);
-    color: var(--color-base-60);
-    height: calc(var(--size-4-4) * 2);
-    text-overflow: ellipsis !important;
-    border-top: 2px solid var(--color-base-100);
-    border-image: linear-gradient(to right,
-            var(--color-base-00),
-            var(--color-base-100),
-            var(--color-base-00)) 1;
+  padding-top: 8px;
+  text-align: center;
+  font-size: var(--size-4-3);
+  color: var(--color-base-60);
+  height: calc(var(--size-4-4) * 2);
+  text-overflow: ellipsis !important;
+  border-top: 2px solid var(--color-base-100);
+  border-image: linear-gradient(to right,
+      var(--color-base-00),
+      var(--color-base-100),
+      var(--color-base-00)) 1;
 }
 
+.Excalidraw-Markdown .callout[data-callout="bannerdescriptionc"] .callout-content>p,
 .markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content>p {
-    width: 100% !important;
+  width: 100% !important;
 }
 
+.Excalidraw-Markdown .callout[data-callout="bannerdescriptionc"] .callout-content,
 .markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content {
-    position: absolute;
-    left: 0;
-    top: 13.55em;
-    padding-left: var(--file-margins) !important;
-    padding-right: var(--file-margins) !important;
-    overflow: hidden;
+  position: absolute;
+  /*left: 0;*/
+  top: 13.55em;
+  /*padding-left: var(--file-margins) !important;
+  padding-right: var(--file-margins) !important;*/
+  overflow: hidden;
+  min-width: auto;
+  width: 100%;
+  max-width: var(--file-line-width) !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 
 /*Left square Icon*/
-.callout[data-callout="bannericonl"] .callout-content {
-    top: 5.5em;
-    overflow: visible;
-    position: absolute;
-    left: var(--h1-style);
+.Excalidraw-Markdown .callout[data-callout="bannericonl"] .callout-content,
+.markdown-reading-view .callout[data-callout="bannericonl"] .callout-content,
+.canvas .callout[data-callout="bannericonl"] .callout-content {
+  top: 5.5em;
+  overflow: visible;
+  position: absolute;
+  left: var(--h1-style);
 }
 
 .callout[data-callout="bannericonl"] .callout-content>p {
-    display: flex;
-    font-size: 5em;
-    aspect-ratio: 1;
-    position: relative;
-    align-items: center;
+  display: flex;
+  font-size: 5em;
+  aspect-ratio: 1;
+  position: relative;
+  align-items: center;
 
-    justify-content: center;
-    border: unset !important;
-    width: calc(var(--bannericon-wh) / 5);
-    height: calc(var(--bannericon-wh) / 5);
-    margin: unset;
-    object-fit: inherit;
+  justify-content: center;
+  border: unset !important;
+  width: calc(var(--bannericon-wh) / 5);
+  height: calc(var(--bannericon-wh) / 5);
+  margin: unset;
+  object-fit: inherit;
 }
 
 .callout[data-callout="bannericonl"] .callout-content>p>span>img {
-    display: flex;
-    aspect-ratio: 1;
-    box-shadow: var(--shadow-l);
-    font-size: var(--font-text-size);
-    overflow: hidden;
-    object-fit: cover;
-    background-color: var(--background-secondary-alt);
-    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
-    left: var(--h1-style);
-    border-radius: var(--bannericon-square-radius) !important;
+  display: flex;
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-l);
+  font-size: var(--font-text-size);
+  overflow: hidden;
+  object-fit: cover;
+  background-color: var(--background-secondary-alt);
+  border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+  left: var(--h1-style);
+  border-radius: var(--bannericon-square-radius) !important;
 }
 
 /* Left Circle Icon*/
-.callout[data-callout="bannericonlc"] .callout-content {
-    top: 5.5em;
-    overflow: visible;
-    position: absolute;
-    left: var(--h1-style);
+.Excalidraw-Markdown .callout[data-callout="bannericonlc"] .callout-content,
+.markdown-reading-view .callout[data-callout="bannericonlc"] .callout-content,
+.canvas .callout[data-callout="bannericonlc"] .callout-content {
+  top: 5.5em;
+  overflow: visible;
+  position: absolute;
+  left: var(--h1-style);
 }
 
 .callout[data-callout="bannericonlc"] .callout-content>p {
-    display: flex;
-    font-size: 5em;
-    aspect-ratio: 1;
-    position: relative;
-    align-items: center;
+  display: flex;
+  font-size: 5em;
+  aspect-ratio: 1;
+  position: relative;
+  align-items: center;
 
-    justify-content: center;
-    border: unset !important;
-    width: calc(var(--bannericon-wh) / 5);
-    height: calc(var(--bannericon-wh) / 5);
-    margin: unset;
-    object-fit: inherit;
+  justify-content: center;
+  border: unset !important;
+  width: calc(var(--bannericon-wh) / 5);
+  height: calc(var(--bannericon-wh) / 5);
+  margin: unset;
+  object-fit: inherit;
 }
 
 .callout[data-callout="bannericonlc"] .callout-content>p>span>img {
-    display: flex;
-    aspect-ratio: 1;
-    box-shadow: var(--shadow-l);
-    font-size: var(--font-text-size);
-    overflow: hidden;
-    object-fit: cover;
-    background-color: var(--background-secondary-alt);
-    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
-    border-radius: var(--bannericon-circle-radius) !important;
-    left: var(--h1-style);
+  display: flex;
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-l);
+  font-size: var(--font-text-size);
+  overflow: hidden;
+  object-fit: cover;
+  background-color: var(--background-secondary-alt);
+  border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+  border-radius: var(--bannericon-circle-radius) !important;
+  left: var(--h1-style);
 }
 
 /*Center square Icon*/
-.callout[data-callout="bannericonc"] .callout-content {
-    top: 5.5em;
-    display: flex;
-    overflow: visible;
-    position: absolute;
-    left: calc(50% - 2.5em);
+.Excalidraw-Markdown .callout[data-callout="bannericonc"] .callout-content,
+.markdown-reading-view .callout[data-callout="bannericonc"] .callout-content,
+.canvas .callout[data-callout="bannericonc"] .callout-content {
+  top: 5.5em;
+  display: flex;
+  overflow: visible;
+  position: absolute;
+  left: calc(50% - 2.5em);
 }
 
 .callout[data-callout="bannericonc"] .callout-content>p {
-    display: flex;
-    font-size: 5em;
-    aspect-ratio: 1;
-    position: relative;
-    align-items: center;
+  display: flex;
+  font-size: 5em;
+  aspect-ratio: 1;
+  position: relative;
+  align-items: center;
 
-    justify-content: center;
-    border: unset !important;
-    width: calc(var(--bannericon-wh) / 5);
-    height: calc(var(--bannericon-wh) / 5);
-    margin: unset;
-    object-fit: inherit;
+  justify-content: center;
+  border: unset !important;
+  width: calc(var(--bannericon-wh) / 5);
+  height: calc(var(--bannericon-wh) / 5);
+  margin: unset;
+  object-fit: inherit;
 }
 
 .callout[data-callout="bannericonc"] .callout-content>p>span>img {
-    display: flex;
-    aspect-ratio: 1;
-    box-shadow: var(--shadow-l);
-    font-size: var(--font-text-size);
-    overflow: hidden;
-    object-fit: cover;
-    background-color: var(--background-secondary-alt);
-    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
-    left: var(--h1-style);
-    border-radius: var(--bannericon-square-radius) !important;
+  display: flex;
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-l);
+  font-size: var(--font-text-size);
+  overflow: hidden;
+  object-fit: cover;
+  background-color: var(--background-secondary-alt);
+  border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+  left: var(--h1-style);
+  border-radius: var(--bannericon-square-radius) !important;
 }
 
 /*Center Circle Icon*/
-.callout[data-callout="bannericoncc"] .callout-content {
-    top: 5.5em;
-    overflow: visible;
-    position: absolute;
-    left: calc(50% - 40px);
+.Excalidraw-Markdown .callout[data-callout="bannericoncc"] .callout-content,
+.markdown-reading-view .callout[data-callout="bannericoncc"] .callout-content,
+.canvas .callout[data-callout="bannericoncc"] .callout-content {
+  top: 5.5em;
+  overflow: visible;
+  position: absolute;
+  left: calc(50% - 40px);
 }
 
 .callout[data-callout="bannericoncc"] .callout-content>p {
-    display: flex;
-    font-size: 5em;
-    aspect-ratio: 1;
-    position: relative;
-    align-items: center;
+  display: flex;
+  font-size: 5em;
+  aspect-ratio: 1;
+  position: relative;
+  align-items: center;
 
-    justify-content: center;
-    border: unset !important;
-    width: calc(var(--bannericon-wh) / 5);
-    height: calc(var(--bannericon-wh) / 5);
-    margin: unset;
-    object-fit: inherit;
+  justify-content: center;
+  border: unset !important;
+  width: calc(var(--bannericon-wh) / 5);
+  height: calc(var(--bannericon-wh) / 5);
+  margin: unset;
+  object-fit: inherit;
 }
 
 .callout[data-callout="bannericoncc"] .callout-content>p>span>img {
-    display: flex;
-    aspect-ratio: 1;
-    box-shadow: var(--shadow-l);
-    font-size: var(--font-text-size);
-    overflow: hidden;
-    object-fit: cover;
-    background-color: var(--background-secondary-alt);
-    border: var(--bannericon-border-width) solid var(--background-secondary-alt);
-    border-radius: var(--bannericon-circle-radius) !important;
-    left: var(--h1-style);
+  display: flex;
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-l);
+  font-size: var(--font-text-size);
+  overflow: hidden;
+  object-fit: cover;
+  background-color: var(--background-secondary-alt);
+  border: var(--bannericon-border-width) solid var(--background-secondary-alt);
+  border-radius: var(--bannericon-circle-radius) !important;
+  left: var(--h1-style);
 }
 
 /*Hide Default CallOut Style*/
@@ -378,7 +400,7 @@ span[src$="bannericoncc"] img {
 .callout[data-callout="bannericoncc"] .callout-icon,
 .callout[data-callout="bannericoncc"] .callout-icon::after,
 .callout[data-callout="bannericoncc"] .callout-fold {
-    display: none;
+  display: none;
 }
 
 .callout[data-callout="bannericonl"],
@@ -389,67 +411,82 @@ span[src$="bannericoncc"] img {
 .callout[data-callout="bannerdescription"],
 .callout[data-callout="bannerdescriptionc"],
 .callout[data-callout="bannerimage"] {
-    width: 100%;
-    margin: unset;
-    padding: unset;
-    border-style: unset;
-    border-color: unset;
-    border-width: unset;
-    border-radius: unset;
-    mix-blend-mode: unset;
-    background-color: unset;
-    overflow: visible !important;
+  width: 100%;
+  margin: unset;
+  padding: unset;
+  border-style: unset;
+  border-color: unset;
+  border-width: unset;
+  border-radius: unset;
+  mix-blend-mode: unset;
+  background-color: unset;
+  overflow: visible !important;
 }
 
-.callout[data-callout="bannerimage"] {
-    display: flex;
-    align-items: center;
-    width: auto !important;
-    object-fit: cover !important;
+.Excalidraw-Markdown .callout[data-callout="bannerimage"],
+.markdown-reading-view .callout[data-callout="bannerimage"] {
+  display: flex;
+  align-items: center;
+  width: auto !important;
+  object-fit: cover !important;
 }
 
-.callout[data-callout="bannerdescription"],
-.callout[data-callout="bannerdescriptionc"] {
-    top: 20em;
+.Excalidraw-Markdown .callout[data-callout="bannerdescription"],
+.Excalidraw-Markdown .callout[data-callout="bannerdescriptionc"],
+.markdown-reading-view .callout[data-callout="bannerdescription"],
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] {
+  top: 20em;
 }
 
 /*=======Plugin Support=======*/
 /*Strange New World*/
-.snw-reference[data-snw-reallink$="bannerimg"],
-.snw-reference[data-snw-reallink*="bannericon"] {
-    display: none !important;
+.Excalidraw-Markdown .snw-reference[data-snw-reallink$="bannerimg"],
+.Excalidraw-Markdown .snw-reference[data-snw-reallink*="bannericon"],
+.markdown-reading-view .snw-reference[data-snw-reallink$="bannerimg"],
+.markdown-reading-view .snw-reference[data-snw-reallink*="bannericon"] {
+  display: none !important;
 }
 
 /*Breadcrumbs*/
-.bannerimg .BC-trail,
-.bannericon .BC-trail {
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 1.5em !important;
-    border: 1px solid var(--background-modifier-border);
+.Excalidraw-Markdown .bannerimg .BC-trail,
+.Excalidraw-Markdown .bannericon .BC-trail,
+.markdown-reading-view .bannerimg .BC-trail,
+.markdown-reading-view .bannericon .BC-trail {
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 1.5em !important;
+  border: 1px solid var(--background-modifier-border);
 }
 
-.bannerimg .BC-trail .markdown-reading-view>.markdown-preview-view.is-readable-line-width,
-.markdown-source-view.is-readable-line-width .cm-sizer {
-    padding-top: unset;
+.Excalidraw-Markdown .bannerimg .BC-trail .markdown-preview-view.is-readable-line-width,
+.Excalidraw-Markdown .markdown-source-view.is-readable-line-width .cm-sizer,
+.markdown-reading-view .bannerimg .BC-trail .markdown-reading-view>.markdown-preview-view.is-readable-line-width,
+.markdown-reading-view .markdown-source-view.is-readable-line-width .cm-sizer {
+  padding-top: unset;
 }
 
 /*Canvas*/
-.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view:has([alt*="bannerimg"])::before {
-    content: unset !important;
+.Excalidraw-Markdown .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view:has([alt*="bannerimg"])::before,
+.markdown-reading-view .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view:has([alt*="bannerimg"])::before {
+  content: unset !important;
 }
 
-.canvas .description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
-    margin-bottom: unset;
+.Excalidraw-Markdown .canvas .description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title,
+.markdown-reading-view .canvas .description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
+  margin-bottom: unset;
 }
 
-.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::before,
-.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::after {
-    content: none;
-    display: block;
+
+.Excalidraw-Markdown .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::before,
+.Excalidraw-Markdown .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::after,
+.markdown-reading-view .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::before,
+.markdown-reading-view .canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::after {
+  content: none;
+  display: block;
 }
 
-.canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
-    margin-left: calc(var(--file-margins));
-    margin-right: calc(var(--file-margins));
+.Excalidraw-Markdown .canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p,
+.markdown-reading-view .canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
+  margin-left: calc(var(--file-margins));
+  margin-right: calc(var(--file-margins));
 }
