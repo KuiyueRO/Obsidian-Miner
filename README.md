@@ -32,3 +32,7 @@ WIP...
 - [Heading Icon](md/HeadingIcon.md)
 - [Miner Canvas](md/MinerCanvas.md)
 - [Miner Banner](md/MinerBanner.md)
+
+## Why not use :has?
+
+`:has` can greatly simplify this CSS snippet, but it is not supported in older versions of WebView.
